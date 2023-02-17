@@ -1,34 +1,16 @@
+// eslint-disable-next-line
+import React from "react";
 import './App.css';
-import Navbar from "./components/Navbar";
-import Row from './components/ProductRow';
-import Footer from "./components/Footer"
-import CategoriesRow from './components/CategoriesRow';
+import {BrowserRouter,Routes,Route} from "react-router-dom";
+import Home from "./components/Home";
+import ProductPage from "./components/ProductPage";
 
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>Hellow</p>
-    //   </header>
-    // </div>
-    <div>
-      {/* <p>Hellow</p> */}
-      <Navbar/>
-      <div className='m-4'>
-        <div className='ms-2 my-3'>
-          <h2>Trending</h2>
-        </div>
-        <Row/>
-      </div>
-      <div className='m-4'>
-        <div className='ms-2 my-3'>
-          <h2>Category</h2>
-        </div>
-        <CategoriesRow/>
-      </div>
-      <Footer/>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/product" element={<ProductPage/>}/>
+    </Routes>
   );
 }
 

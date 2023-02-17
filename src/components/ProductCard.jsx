@@ -1,16 +1,18 @@
 import React from "react";
-import image1 from "../images/image2.jpeg";
+import { Link } from "react-router-dom";
 
-function ProductCard(){
+function ProductCard(props){
     return(
         <div className="card">
-            <img src={image1} className="card-img-top" alt="nft-image"/>
+            <img src={props.image_link} className="card-img-top img-card" alt="nft"/>
             <div className="card-body text-center">
                 <div>
-                    <p className="fs-4 fw-bold">100ETH</p>
+                    <p className="fs-4 fw-bold">{props.price}</p>
                 </div>
                 <p className="card-text">Ape NFT</p>
-                <button className="btn btn-dark">Buy now</button>
+                <Link to="/product">
+                    <button className="btn btn-dark">Buy now</button>
+                </Link>
             </div>
         </div>
     )
