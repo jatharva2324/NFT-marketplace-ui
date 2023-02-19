@@ -1,9 +1,15 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Product from "./Product";
+import Footer from "../components/Footer";
 
 function ProductPage(){
     return(
-        <Navbar/>
+        <div>
+            <Navbar/>
+            <Product/> 
+            <Footer/> 
+        </div>
     )
 }
 
